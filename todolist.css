@@ -1,4 +1,5 @@
 .top-bar{
+  z-index: 2;
   position: absolute;
   width: 1920px;
   height: 103px;
@@ -54,11 +55,11 @@
   top: 25px;
 }
 .container{
-  position: relative;
+  position: absolute;
   width: 1920px;
-  height: 1011px;
+  height: 1021px;
   left: 0px;
-  top: 100px;
+  top: 90px;
   background: #F1EFFF;
 }
 .line{
@@ -78,7 +79,8 @@
   height: 931px;
   top: 80px;
   border-radius: 0 40px 0 0;
-  box-shadow: inset -90px 5px 40px rgba(143, 146, 165, 0.25);
+  box-shadow: inset -90px 5px 40px rgba(143,146,165,0.25);
+  background-color: #F1EFFF;
 }
 .left{left: 0px;}
 .right{
@@ -165,7 +167,7 @@ circle{
   line-height: 41px;
   color: #7277FF;
 }
-.todo-line1,.todo-line3,.todo-line4,.todo-line5,.todo-line6,.todo-line7,.todo-line8{
+.todo-line1,.todo-line2,.todo-line3,.todo-line4,.todo-line5,.todo-line7,.todo-line8{
   position: absolute;
   width: 653px;
   height: 0px;
@@ -174,56 +176,86 @@ circle{
   background-color: #D8D9FF;
 }
 .todo-line1{top: 84px;}
-.todo-line2{
+.todo-line2{top: 152px;}
+.todo-line6{
   position: absolute;
   width: 653px;
   height: 0px;
   left: 39px;
-  top: 152px;
+  top: 424px;
   border: 1px solid #B9BCFE;
   background-color: #B9BCFE;
 }
 .todo-line3{top: 220px;}
 .todo-line4{top: 288px;}
 .todo-line5{top: 356px;}
-.todo-line6{top: 424px;}
 .todo-line7{top: 492px;}
 .todo-line8{top: 560px;}
 
-.popup-button{
+.plus-button{
   font-size: 20px;
   font-weight:700;
   position:absolute;
   width: 28px;
   height: 28px;
   left: 52px;
-  top: 104px;
+  top: 172px;
   border-radius: 100%;
   background-color: rgba( 255, 255, 255, 0);
   color: #7277FF;
   border: 2px solid #7277FF;
 }
 .todo-form{
-  display: none;
   position: absolute;
   width: 380px;
   height: 43px;
   left: 51px;
-  top: 166px;
+  list-style: none;
+}
+.todo-form:nth-child(1){top: 103px;}
+.todo-form:nth-child(2){top: 168px;}
+.todo-form:nth-child(3){top: 238px;}
+.todo-form:nth-child(4){top: 308px;}
+.todo-form:nth-child(5){top: 377px;}
+
+.check-box{
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 0px;
+  top: 5px;
+  background: #FFFFFF;
+  border: 1px solid #7277FF;
+}
+.check-icon{
+  display: none;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  right: 340px;
+  bottom: 18px;
 }
 .todo-input{
   position: absolute;
-  left: 25px;
+  left: 40px;
   font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 33px;
-  color: rgba(63, 60, 152, 0.47);
+  color: #020076;
   border: 0;
   outline: 0;
   background-color: #F6F1FF;
-  ;
+}
+.pencil{
+  position:absolute;
+  left: 540px;
+}
+.delete-button{
+  position: absolute;
+  left: 601px;
+  top: 0;
 }
 .done-contents{
   position: absolute;
@@ -233,7 +265,7 @@ circle{
   top: 350px;
   background: #F6F1FF;
 }
-.done-line1, .done-line2,.done-line3,.done-line4,.done-line5,.done-line6,.done-line7,.done-line8{
+.done-line1, .done-line2,.done-line3,.done-line4,.done-line5,.done-line7,.done-line8{
   position: absolute;
   width: 366px;
   height: 0px;
@@ -246,7 +278,15 @@ circle{
 .done-line3{top: 220px;}
 .done-line4{top: 288px;}
 .done-line5{top: 356px;}
-.done-line6{top: 424px;}
+.done-line6{
+  position: absolute;
+  width: 366px;
+  height: 0px;
+  left: 41px;
+  top: 424px;
+  border: 1px solid #B9BCFE;
+  background-color: #B9BCFE;
+}
 .done-line7{top: 492px;}
 .done-line8{top: 560px;}
 
